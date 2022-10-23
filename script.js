@@ -13,7 +13,10 @@ function addR() {
   }
 
   for (let i = 0; i < numCols; i++) {
-    row.insertCell(i);
+    cell = row.insertCell(i);
+    cell.onclick=function(){
+      cell.style.backgroundColor = colorSelected;
+    }
   }
 
   numRows++;
