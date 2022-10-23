@@ -15,12 +15,16 @@ function addR() {
   for (let i = 0; i < numCols; i++) {
     cell = row.insertCell(i);
     cell.onclick=function(){
-      cell.style.backgroundColor = colorSelected;
-    }
+      this.style.backgroundColor = colorSelected;
+    };
   }
 
   numRows++;
 }
+
+// function changeColor(cell){
+//   this.style.backgroundColor = colorSelected;
+// }
 
 // Add a column
 function addC() {
@@ -32,7 +36,10 @@ function addC() {
   }
   else {
     for (let i = 0; i < numRows; i++){
-      grid.rows[i].insertCell(numCols);
+      cell = grid.rows[i].insertCell(numCols);
+      cell.onclick=function(){
+        this.style.backgroundColor = colorSelected;
+      };
     }
     numCols++;
   }
