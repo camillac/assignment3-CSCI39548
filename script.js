@@ -1,11 +1,29 @@
 // Declare global variables
 let numRows = 0;
 let numCols = 0;
-let colorSelected; 
+let colorSelected;
+
+var element = document.getElementById("grid");
+var row = document.getElementById("row");
+
+// <tr>
+//   <td onclick="alert('Clicked a table cell');"></td>
+//   <td onclick="alert('Clicked a table cell');"></td>
+//   <td onclick="alert('Clicked a table cell');"></td>
+// </tr>
+// console.log(element)
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+  if (numCols == 0){
+    numCols++;
+  }
+  element.innerHTML += "<tr id='row'>";
+  for (let i = 0; i < numCols; i++) {
+    element.innerHTML += "<td></td>";
+  }
+  element.innerHTML += "</tr>";
+  numRows++;
 }
 
 // Add a column
