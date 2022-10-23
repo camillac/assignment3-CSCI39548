@@ -21,7 +21,18 @@ function addR() {
 
 // Add a column
 function addC() {
-  alert("Clicked Add Col"); // Replace this line with your code.
+  var grid = document.getElementById("grid");
+
+  if (numRows == 0){
+    addR();
+  }
+  else {
+    for (let i = 0; i < numRows; i++){
+      console.log("hello" + numRows);
+      grid.rows[i].insertCell(numCols);
+    }
+    numCols++;
+  }
 }
 
 // Remove a row
