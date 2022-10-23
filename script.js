@@ -3,32 +3,25 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
-var element = document.getElementById("grid");
-var row = document.getElementById("row");
-
-// <tr>
-//   <td onclick="alert('Clicked a table cell');"></td>
-//   <td onclick="alert('Clicked a table cell');"></td>
-//   <td onclick="alert('Clicked a table cell');"></td>
-// </tr>
-// console.log(element)
-
 // Add a row
 function addR() {
+  var grid = document.getElementById("grid");
+  row = grid.insertRow(numRows);
+
   if (numCols == 0){
     numCols++;
   }
-  element.innerHTML += "<tr id='row'>";
+
   for (let i = 0; i < numCols; i++) {
-    element.innerHTML += "<td></td>";
+    row.insertCell(i);
   }
-  element.innerHTML += "</tr>";
+
   numRows++;
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+  alert("Clicked Add Col"); // Replace this line with your code.
 }
 
 // Remove a row
