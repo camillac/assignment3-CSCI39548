@@ -24,6 +24,7 @@ function addC() {
   var grid = document.getElementById("grid");
 
   if (numRows == 0){
+    numCols++;
     addR();
   }
   else {
@@ -36,7 +37,13 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+  var grid = document.getElementById("grid"); // table reference
+
+  if (numRows > 0){
+    grid.deleteRow(numRows-1);
+    numRows--;
+  }
+
 }
 
 // Remove a column
