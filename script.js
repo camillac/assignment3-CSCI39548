@@ -28,7 +28,6 @@ function addC() {
   }
   else {
     for (let i = 0; i < numRows; i++){
-      console.log("hello" + numRows);
       grid.rows[i].insertCell(numCols);
     }
     numCols++;
