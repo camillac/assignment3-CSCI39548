@@ -83,7 +83,11 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+  var grid = document.getElementById("grid"); // table reference
+
+  for (i = 0; i < numRows; i++)
+    for (j = 0; j < numCols; j++)
+      grid.rows[i].cells[j].style.backgroundColor = colorSelected;
 }
 
 // Clear all cells
